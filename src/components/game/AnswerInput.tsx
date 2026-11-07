@@ -7,17 +7,18 @@ interface Props {
   onSubmit: () => void;
   feedback: "idle" | "wrong" | "dupe" | "right";
   disabled?: boolean;
+  shakeKey: number;
 }
 
 const messages = { idle: "Digite o nome de uma música", wrong: "Não está na lista", dupe: "Você já acertou essa", right: "Boa!" };
 
 export const AnswerInput = forwardRef<HTMLInputElement, Props>(function AnswerInput(
-  { value, onChange, onSubmit, feedback, disabled },
+  { value, onChange, onSubmit, feedback, disabled, shakeKey },
   ref,
 ) {
   return (
     <form onSubmit={(e) => { e.preventDefault(); onSubmit(); }}>
-      <div className={`flex gap-2 ${feedback === "wrong" ? "animate-shake" : ""}`} key={feedback === "wrong" ? Math.random() : "s"}>
+      <div className="flex gap-2">
         <input
           ref={ref}
           value={value}
@@ -35,7 +36,7 @@ export const AnswerInput = forwardRef<HTMLInputElement, Props>(function AnswerIn
           <CornerDownLeft className="h-5 w-5" />
         </button>
       </div>
-      <p className={`mt-2 text-xs ${feedback === "right" ? "text-amber" : feedback === "idle" ? "text-muted-foreground" : "text-primary"}`}>
+      <p key={shakeKey} className={`mt-2 text-xs ${feedback === "wrong" ? "animate-shake " : ""}${feedback === "right" ? "text-amber" : feedback === "idle" ? "text-muted-foreground" : "text-primary"}`}>
         {messages[feedback]}
       </p>
     </form>
