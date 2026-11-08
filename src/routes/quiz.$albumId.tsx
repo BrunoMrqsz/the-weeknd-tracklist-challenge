@@ -122,14 +122,14 @@ function QuizPage() {
     const missing: { album: string; title: string; n: number }[] = [];
     albums.forEach((a) => a.tracks.forEach((tr, i) => { if (!found.has(trackKey(a.id, i))) missing.push({ album: a.title, title: tr.title, n: i + 1 }); }));
     if (!missing.length) return;
-    const m = missing[Math.floor(Math.random() * missing.length)];
+    const m = missing[Math.floor(Math.random() * missing.length)]!;
     const initials = m.title.replace(/\([^)]*\)/g, "").trim().split(/\s+/).map((w) => w[0] + "…").join(" ");
     setHint(`${m.album}, faixa ${m.n}: ${initials}`);
     setHintsLeft((h) => h - 1); setStreak(0);
     inputRef.current?.focus();
   };
 
-  const single = albums[0];
+  const single = albums[0]!;
 
   return (
     <div className="min-h-screen">

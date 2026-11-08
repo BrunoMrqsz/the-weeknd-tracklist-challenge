@@ -11,7 +11,7 @@ export function Vinyl({ hue, className = "" }: { hue: number; className?: string
   );
 }
 
-export function AlbumCard({ album, record }: { album: Album; record?: RecordEntry }) {
+export function AlbumCard({ album, record }: { album: Album; record?: RecordEntry | undefined }) {
   const pct = record ? Math.round((record.found / record.total) * 100) : 0;
   return (
     <Link
