@@ -4,6 +4,12 @@ Quiz cronometrado inspirado no jogo **"Países do Mundo"** do JetPunk: você pre
 
 **152 faixas** em **13 lançamentos**, de *House of Balloons* (2011) a *Hurry Up Tomorrow* (2025).
 
+## Jogar online
+
+O jogo está publicado e funciona em qualquer navegador, sem instalar nada:
+
+**https://theweeknddiscography.netlify.app/**
+
 ## Como jogar
 
 - **Escolha um lançamento** (10 minutos cada) ou o **Desafio completo** (todos os lançamentos numa tela só, 40 minutos).
