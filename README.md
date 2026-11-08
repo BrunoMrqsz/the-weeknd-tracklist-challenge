@@ -58,7 +58,7 @@ src/
 │   ├── index.tsx           # Página inicial: lançamentos, como jogar, recordes
 │   ├── quiz.$albumId.tsx   # Tela do quiz (um lançamento ou "todas")
 │   └── __root.tsx          # Estrutura compartilhada de todas as páginas
-├── components/game/        #Vinil, tracklist, cronômetro, input, placar, resultado
+├── components/game/        # Vinil, tracklist, cronômetro, input, placar, resultado
 └── test/                   # Testes de comparação de respostas e de rota
 ```
 
