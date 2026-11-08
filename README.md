@@ -40,6 +40,8 @@ bun run dev
 
 Abra a URL que aparece no terminal (normalmente `http://localhost:5173`).
 
+> A versão publicada em **https://theweeknddiscography.netlify.app/** é a mesma versão de produção do jogo, então rodar localmente só é necessário se você quiser estudar ou alterar o código.
+
 ### Scripts
 
 | Comando | O que faz |
